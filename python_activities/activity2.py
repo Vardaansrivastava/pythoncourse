@@ -1,13 +1,27 @@
-# Creating different variables
-x = 5
-y = "vardaan"
-print(x)
-print(y)
+# Assigning Different Variables
+name = "Vardaan"
+age = 14
+is_student = True
+weight = 54.6
 
-codingal = "codingal"
-print(codingal)
+# Printing Different Variables and their Data Type
+print("Name :", name)
+print("Data Type of Name is", type(name))
 
-# User Input
-name = input("enter your name: ")
+print("Age :", age)
+print("Data Type of Age is", type(age))
 
-print("\nHello", name, "\nwelcome to codingal")
+print("is_student :", is_student)
+print("Data Type of is_student is", type(is_student))
+
+print("Weight :", weight)
+print("Data Type of weight is", type(weight))
+
+# Type casting to convert the datatype of variables
+print("\n After Type Casting....")
+age = str(age)
+print(age)
+print("Data Type of age is", type(age))
+weight = int(weight)
+print(weight)
+print("Data Type of Weight is", type(weight))
