@@ -6,7 +6,9 @@ print("1. Addition")
 print("2. Subtraction")
 print("3. Multiplication")
 print("4. Division")
-choice = input("Enter choice (1/2/3/4) : ")
+print("5. Floor Division")
+print("6. Exit")
+choice = input("Enter choice (1/2/3/4/5/6) : ")
 if choice == '1':
     print(x, "+", y, "=", x + y, "Thanks for using the calculator!", "'by Vardaan'")
 elif choice == '2':
@@ -15,6 +17,7 @@ elif choice == '3':
     print(x, "*", y, "=", x*y, "Thanks for using the calculator!", "'by Vardaan'")
 elif choice == '4':
     print(x, "/", y, "=", x/y, "Thanks for using the calculator!", "'by Vardaan'" )
-else:
-    print("Invalid input")
-
+elif choice == '5':
+    print(x, "//", y, "=", x//y, "Thanks for using the calculator!", "'by Vardaan'")
+elif choice == '6':
+    print("Exiting the calculator. Goodbye!")
