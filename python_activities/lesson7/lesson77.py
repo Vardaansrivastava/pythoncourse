@@ -36,7 +36,7 @@
 # Write a program to select a ride according to your preference. The ride is divided into two major categories: 1. Bike 2. Car And further, bikes and cars are divided into 2 subcategories. To give the user better selection options.
 
 
-
+# Activity 1.
 print("Do you want your ride to be with a car or a bike.?")
 print("1. car")
 print("2. bike")
@@ -71,8 +71,7 @@ else:
 
 
 
-
-# WAP tocheck whether the students are able of taking the exam or not. Students will be allowed only in two conditions: If they have a medical cause (‘Y’ for yes and ‘N’ for no). If yes, then they will be allowed. If No, then check attendance If attendance is above 75, then allowed; otherwise, not allowed.
+# Activity 2.
 medical_cause = input("Do you have a medical cause? (Y/N): ")
 if medical_cause.upper() == 'Y':
     print("You are allowed to take the exam.")
@@ -82,3 +81,35 @@ else:
         print("You are allowed to take the exam.")
     else:
         print("You are not allowed to take the exam due to low attendance.")
+
+
+
+
+
+
+# Activity 3.
+units = int(input(" Please enter Number of Units you Consumed : "))
+
+# Check for units less than 50
+if(units < 50):
+    amount = units * 2.60 
+    surcharge = 25 
+
+# Check for units less than 100
+elif(units <= 100):
+    amount = 130 + ((units - 50) * 3.25)
+    surcharge = 35
+
+# Check for units less than or equal to 200
+elif(units <= 200):
+    amount = 130 + 162.50 + ((units - 100) * 5.26)
+    surcharge = 45
+
+
+# more than 200
+else:
+    amount = 130 + 162.50 + 526 + ((units - 200) * 8.45)
+    surcharge = 75
+
+total = amount + surcharge
+print("\nElectricity Bill = %.2f"  %total)
