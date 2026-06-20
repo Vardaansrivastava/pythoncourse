@@ -80,11 +80,7 @@ else:
     if attendance > 75:
         print("You are allowed to take the exam.")
     else:
-        print("You are not allowed to take the exam due to low attendance.")
-
-
-
-
+        print("You are not allowed to take the exam.")
 
 
 # Activity 3.
