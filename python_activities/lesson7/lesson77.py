@@ -65,3 +65,20 @@ else:
     print("Invalid option.")
 
 
+
+
+
+
+
+
+
+# WAP tocheck whether the students are able of taking the exam or not. Students will be allowed only in two conditions: If they have a medical cause (‘Y’ for yes and ‘N’ for no). If yes, then they will be allowed. If No, then check attendance If attendance is above 75, then allowed; otherwise, not allowed.
+medical_cause = input("Do you have a medical cause? (Y/N): ")
+if medical_cause.upper() == 'Y':
+    print("You are allowed to take the exam.")
+else:
+    attendance = float(input("Enter your attendance percentage: "))
+    if attendance > 75:
+        print("You are allowed to take the exam.")
+    else:
+        print("You are not allowed to take the exam due to low attendance.")
