@@ -71,6 +71,7 @@ else:
 
 
 
+
 # Activity 2.
 medical_cause = input("Do you have a medical cause? (Y/N): ")
 if medical_cause.upper() == 'Y':
