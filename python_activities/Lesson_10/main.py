@@ -55,6 +55,12 @@
 # 6) After the loop, print how many times `char` occurred in `string` using `count`.
 
 
+from math import prod
+
+
+from math import prod
+
+
 string = input("Enter a word :")
 char = input("Enter a single character :")
 i = 0
@@ -85,6 +91,17 @@ print("This particular",char, "has occured", count, "times")
 
 # 6) If the loop finishes without finding any divisor (no break happened),
 #    then `num` is prime → print `num`.
+
+lower = int(input("enter a lower range: "))
+upper = int(input("enter a upper range: "))
+print("Prime numbers between", lower, "and", upper, "are:")
+for num in range(lower, upper + 1):
+   if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num)
 
 # Activity 3:
 # 1) Take an integer input from the user and store it in `num`.
@@ -119,4 +136,26 @@ print("This particular",char, "has occured", count, "times")
 # 8) Print the product in the required format:
 #    "Product of Mid digits (midOne * midTwo) = prod"
 
+# Activity 3: Find the product of middle two digits of a number
+num = int(input("Enter the number : "))
+t = num
+numLen = 0
+while t>0: 
+  numLen = numLen+1
+  t = int(t/10)
+if numLen>=4:
+  numLen = int(numLen/2)
+  character = 0
+  while num>0:
+    rem = num%10
+    if character==numLen:
+      midOne = rem
+    elif character==(numLen-1): 
+      midTwo = rem
+    num = int(num/10)
+    character = character+1
+  product = midOne*midTwo 
+  print("\nProduct of Mid digits (" +str(midOne)+ "*" +str(midTwo)+ ") = ", product)
 
+else:
+  print("\nIt's not a 4 or more than 4-digit number!")
