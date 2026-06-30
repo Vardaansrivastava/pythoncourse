@@ -54,6 +54,15 @@ for i in range(n):
 
 # 6) After finishing each row, print a blank `print()` to move to the next line.
 
+rows = int(input("Enter the total Number of Rows  : "))
+number = 1 
+print("Floyd's Triangle") 
+for i in range(1, rows + 1):
+    for j in range(1, i + 1):   
+        print(number, end =" ")
+        number = number + 1
+    print()
+
 # Activity 3: Write a program to demonstrate the numbers in a diamond pattern?
 # 1) Take an integer input from the user and store it in `rowSize`.
 #    (This represents the total height of the diamond pattern.)
@@ -90,4 +99,31 @@ for i in range(n):
 #           - Print the current `num` without moving to the next line.
 #           - Increase `num` by 1 after each print.
 #       v) Print a newline to move to the next row.
+
+rowSize = int(input("enter the number of rows: "))
+if rowSize%2==0: 
+  halfDiamRow = int(rowSize/2)
+else:
+  halfDiamRow = int(rowSize/2)+1
+space = halfDiamRow-1
+for i in range(1, halfDiamRow+1):
+  for j in range(1, space+1):
+    print(end=" ")
+  space = space-1
+  num = 1
+  for j in range(2*i-1):
+    print(end=str(num))
+    num = num+1
+  print()
+space = 1
+for i in range(1, halfDiamRow): 
+  for j in range(1, space+1):  
+    print(end=" ")
+  space = space+1
+  num = 1
+  for j in range(1, 2*(halfDiamRow-i)):
+    print(end=str(num)) 
+    num = num+1
+  print()
+
 
